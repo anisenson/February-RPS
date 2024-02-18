@@ -24,4 +24,23 @@ function playGame(playerChoice) {
     const choices = ['rock', 'paper', 'scissors']; //the choices
     const computerChoice = choices[Math.floor(Math.random() * 3)]; //math 
 
-  
+    // If else to Determine the winner (Googled)
+    if (playerChoice === computerChoice) {
+        outcomeElement.textContent = 'It\'s a tie!';
+    } else if (
+        (playerChoice === 'rock' && computerChoice === 'scissors') ||
+        (playerChoice === 'paper' && computerChoice === 'rock') ||
+        (playerChoice === 'scissors' && computerChoice === 'paper')
+    ) {
+        outcomeElement.textContent = 'You win!';
+        playerScore++;
+    } else {
+        outcomeElement.textContent = 'You lose!';
+        computerScore++;
+    }
+
+    // Update scores
+    playerScoreElement.textContent = playerScore;
+    computerScoreElement.textContent = computerScore;
+}
+
