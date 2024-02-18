@@ -44,3 +44,11 @@ function playGame(playerChoice) {
     computerScoreElement.textContent = computerScore;
 }
 
+// Function to reset the game
+function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    playerScoreElement.textContent = playerScore;
+    computerScoreElement.textContent = computerScore;
+    outcomeElement.textContent = '';
+}
