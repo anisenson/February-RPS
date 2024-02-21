@@ -13,7 +13,7 @@ const scissorsBtn = document.getElementById('scissorsBtn');
 const resetBtn = document.getElementById('resetBtn');
 
 
-// Event Listeners (Googled)
+// Event Listeners (Googled bc rest wasn't working)
 rockBtn.addEventListener('click', () => playGame('rock'));
 paperBtn.addEventListener('click', () => playGame('paper'));
 scissorsBtn.addEventListener('click', () => playGame('scissors'));
@@ -52,3 +52,7 @@ function resetGame() {
     computerScoreElement.textContent = computerScore;
     outcomeElement.textContent = '';
 }
+
+
+
+
