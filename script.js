@@ -11,7 +11,8 @@ const rockBtn = document.getElementById('rockBtn');
 const paperBtn = document.getElementById('paperBtn');
 const scissorsBtn = document.getElementById('scissorsBtn');
 const resetBtn = document.getElementById('resetBtn');
-
+const computerInput = document.getElementById('computerInput')
+const playerInput = document.getElementById('playerInput')
 
 // Event Listeners (Googled bc rest wasn't working)
 rockBtn.addEventListener('click', () => playGame('rock'));
@@ -23,6 +24,10 @@ resetBtn.addEventListener('click', resetGame);
 function playGame(playerChoice) {
     const choices = ['rock', 'paper', 'scissors']; //the choices
     const computerChoice = choices[Math.floor(Math.random() * 3)]; //math 
+
+    // Update inputs
+    playerInput.textContent = playerChoice;
+    computerInput.textContent = computerChoice;
 
     // If else to Determine the winner (Googled)
     if (playerChoice === computerChoice) {
@@ -44,6 +49,8 @@ function playGame(playerChoice) {
     computerScoreElement.textContent = computerScore;
 }
 
+
+
 // Function to reset the game
 function resetGame() {
     playerScore = 0;
@@ -52,6 +59,7 @@ function resetGame() {
     computerScoreElement.textContent = computerScore;
     outcomeElement.textContent = '';
 }
+
 
 
 
