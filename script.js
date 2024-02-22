@@ -49,8 +49,6 @@ function playGame(playerChoice) {
     computerScoreElement.textContent = computerScore;
 }
 
-
-
 // Function to reset the game
 function resetGame() {
     playerScore = 0;
@@ -60,7 +58,13 @@ function resetGame() {
     outcomeElement.textContent = '';
 }
 
+// Alert message for name
+var name = prompt("Please enter your name:");
 
-
-
-
+if (!name.trim()) {
+    alert("Please enter your name!");
+    window.location.reload(); // Reload the page if the name is not entered
+} else {
+    alert("Hello " + name + "!");
+    document.getElementById('userName').innerHTML = name;
+}
