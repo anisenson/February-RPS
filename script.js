@@ -59,9 +59,9 @@ function resetGame() {
 }
 
 // Alert message for name
-var name = prompt("Please enter your name:");
+let name = prompt("Please enter your name:");
 
-if (!name.trim()) {
+if (name === null || !name.trim()) {
     alert("Please enter your name!");
     window.location.reload(); // Reload the page if the name is not entered
 } else {
