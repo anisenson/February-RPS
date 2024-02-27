@@ -66,6 +66,7 @@ function resetGame() {
     roundsPlayed = 0;
     playerScoreElement.textContent = playerScore;
     computerScoreElement.textContent = computerScore;
+    roundsplayedElement.textContent = `Rounds played: ${roundsPlayed}`
     outcomeElement.textContent = '';
 }
 
