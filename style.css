@@ -77,3 +77,6 @@ footer {
     flex-shrink: 0; /* Prevent footer from shrinking */
 }
 
+h1, h3{
+    font-family:  "Shantell Sans", cursive;;
+}
