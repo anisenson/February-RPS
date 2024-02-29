@@ -54,11 +54,15 @@ function playGame(playerChoice) {
     // Increase rounds played
     roundsPlayed++;
 
+    // Display total rounds played
+    roundsplayedElement.textContent = `Total Rounds Played: ${roundsPlayed}`;
+
     // Check if all rounds played
     if (roundsPlayed === totalRounds) {
         endGame();
     }
 }
+
 
 // Function to end the game
 function endGame() {
