@@ -63,7 +63,6 @@ function playGame(playerChoice) {
     }
 }
 
-
 // Function to end the game
 function endGame() {
     // Hide the "Choose your move" header
@@ -98,6 +97,12 @@ function resetGame() {
     computerScoreElement.textContent = computerScore;
     roundsplayedElement.textContent = '';
     outcomeElement.textContent = '';
+
+        // put back the "Choose your move" header
+        document.getElementById('moveHeader').style.display = '';
+
+        // put back the Buttons 
+        document.getElementById('buttonRow').style.display = '';
 }
 
 // Alert message for name
