@@ -66,6 +66,12 @@ function playGame(playerChoice) {
 
 // Function to end the game
 function endGame() {
+    // Hide the "Choose your move" header
+    document.getElementById('moveHeader').style.display = 'none';
+
+    // Hide the Buttons 
+    document.getElementById('buttonRow').style.display = 'none';
+
     // Display total rounds played
     roundsplayedElement.textContent = `Total Rounds Played: ${roundsPlayed}`;
 
