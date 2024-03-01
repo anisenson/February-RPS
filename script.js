@@ -2,14 +2,15 @@
 let playerScore = 0;
 let computerScore = 0;
 let roundsPlayed = 0;
-let totalRounds = 5; // Define the total number of rounds
+
+// Set total rounds to 5
+let totalRounds = 5; 
 
 // variables
 const playerScoreElement = document.getElementById('playerScore');
 const computerScoreElement = document.getElementById('ComputerScore');
 const outcomeElement = document.getElementById('outcome');
 let roundsplayedElement = document.getElementById('roundsPlayed');
-
 const rockBtn = document.getElementById('rockBtn');
 const paperBtn = document.getElementById('paperBtn');
 const scissorsBtn = document.getElementById('scissorsBtn');
@@ -17,7 +18,7 @@ const resetBtn = document.getElementById('resetBtn');
 const computerInput = document.getElementById('computerInput');
 const playerInput = document.getElementById('playerInput');
 
-// Event Listeners
+// Event Listeners 
 rockBtn.addEventListener('click', () => playGame('rock'));
 paperBtn.addEventListener('click', () => playGame('paper'));
 scissorsBtn.addEventListener('click', () => playGame('scissors'));
@@ -51,7 +52,7 @@ function playGame(playerChoice) {
     playerScoreElement.textContent = playerScore;
     computerScoreElement.textContent = computerScore;
 
-    // Increase rounds played
+    // add a round played
     roundsPlayed++;
 
     // Display total rounds played
